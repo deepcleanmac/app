@@ -25,7 +25,7 @@
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; }
   .brand img { width: 32px; height: 32px; border-radius: 8px; }
 
-  .hero { text-align: center; padding: 56px 0 40px; }
+  .hero { text-align: center; padding-top: 56px; padding-bottom: 40px; }
   .hero .icon { width: 112px; height: 112px; border-radius: 24px; }
   h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 24px 0 16px; letter-spacing: -0.02em; }
   .sub { color: var(--muted); font-size: 18px; max-width: 640px; margin: 0 auto 32px; }
@@ -46,13 +46,13 @@
   h2 { font-size: 28px; text-align: center; margin: 0 0 8px; letter-spacing: -0.01em; }
   .lead { text-align: center; color: var(--muted); margin: 0 0 36px; }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 20px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .card img { display: block; width: 100%; height: auto; border-bottom: 1px solid var(--line); }
+  .card .body { padding: 18px 20px 20px; }
   .card h3 { margin: 0 0 6px; font-size: 16px; }
   .card p { margin: 0; color: var(--muted); font-size: 14px; }
 
-  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
-  .two img { width: 100%; border-radius: 12px; border: 1px solid var(--line); display: block; }
 
   ol.steps { counter-reset: s; list-style: none; padding: 0; margin: 0 auto; max-width: 720px; }
   ol.steps li {
@@ -91,7 +91,7 @@
     <div class="meta"><span>macOS 14 Sonoma or later</span><span>Apple Silicon &amp; Intel</span><span>Signed &amp; notarized by Apple</span></div>
     <div class="disclosure">Free to download and scan. Cleaning, uninstalling and other actions require a license.</div>
 
-    <div class="shot"><img src="assets/dashboard.jpg" alt="DeepCleanMac dashboard" width="1600" height="1000"></div>
+    <div class="shot"><img src="assets/hero.jpg" alt="DeepCleanMac System Health view" width="1600" height="900"></div>
   </div>
 
   <section>
@@ -99,24 +99,18 @@
       <h2>Eight tools in one app</h2>
       <p class="lead">Clean, update, uninstall, find duplicates, reset, shred, analyze disk usage and monitor resources.</p>
       <div class="grid">
-        <div class="card"><h3>Smart Cleanup</h3><p>Find supported caches, logs, temp files and app leftovers across 200+ locations. Review the results before anything is removed.</p></div>
-        <div class="card"><h3>App Uninstaller</h3><p>Remove apps along with leftover preferences, caches, containers and support files. You choose which files are removed.</p></div>
-        <div class="card"><h3>App Updater</h3><p>Check for updates to apps from the App Store, Homebrew or Sparkle, all in one list.</p></div>
-        <div class="card"><h3>Duplicate Finder</h3><p>Find identical files by comparing their content, then choose which copies to keep.</p></div>
-        <div class="card"><h3>Disk Space Analyzer</h3><p>Explore what's using your disk with an interactive treemap and find large files.</p></div>
-        <div class="card"><h3>App Resetter</h3><p>Reset supported apps to their default state without reinstalling.</p></div>
-        <div class="card"><h3>File Shredder</h3><p>Remove selected sensitive files using encryption with a discarded key and overwrite passes.</p></div>
-        <div class="card"><h3>System Monitor</h3><p>View real-time CPU, memory and disk usage and the processes using the most resources.</p></div>
+        <div class="card"><img src="assets/cleaner.jpg" alt="Smart Cleanup" width="960" height="540" loading="lazy"><div class="body"><h3>Smart Cleanup</h3><p>Find supported caches, logs, temp files and app leftovers across 200+ locations. Review the results before anything is removed.</p></div></div>
+        <div class="card"><img src="assets/uninstaller.jpg" alt="App Uninstaller" width="960" height="540" loading="lazy"><div class="body"><h3>App Uninstaller</h3><p>Remove apps along with leftover preferences, caches, containers and support files. You choose which files are removed.</p></div></div>
+        <div class="card"><img src="assets/updater.jpg" alt="App Updater" width="960" height="540" loading="lazy"><div class="body"><h3>App Updater</h3><p>Check for updates to apps from the App Store, Homebrew or Sparkle, all in one list.</p></div></div>
+        <div class="card"><img src="assets/duplicate.jpg" alt="Duplicate Finder" width="960" height="540" loading="lazy"><div class="body"><h3>Duplicate Finder</h3><p>Find identical files by comparing their content, then choose which copies to keep.</p></div></div>
+        <div class="card"><img src="assets/disk.jpg" alt="Disk Space Analyzer" width="960" height="540" loading="lazy"><div class="body"><h3>Disk Space Analyzer</h3><p>Explore what's using your disk with an interactive treemap and find large files.</p></div></div>
+        <div class="card"><img src="assets/resetter.jpg" alt="App Resetter" width="960" height="540" loading="lazy"><div class="body"><h3>App Resetter</h3><p>Reset supported apps to their default state without reinstalling.</p></div></div>
+        <div class="card"><img src="assets/shredder.jpg" alt="File Shredder" width="960" height="540" loading="lazy"><div class="body"><h3>File Shredder</h3><p>Remove selected sensitive files using encryption with a discarded key and overwrite passes.</p></div></div>
+        <div class="card"><img src="assets/hero.jpg" alt="System Monitor" width="960" height="540" loading="lazy"><div class="body"><h3>System Monitor</h3><p>View real-time CPU, memory and disk usage and the processes using the most resources.</p></div></div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="wrap two">
-      <img src="assets/clean.jpg" alt="Smart Cleanup results" width="1600" height="998" loading="lazy">
-      <img src="assets/uninstaller.jpg" alt="App Uninstaller" width="1600" height="1003" loading="lazy">
-    </div>
-  </section>
 
   <section>
     <div class="wrap">
