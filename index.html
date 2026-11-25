@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepCleanMac – Download for Mac</title>
+<meta name="description" content="DeepCleanMac is a native macOS utility for reclaiming disk space, uninstalling apps, finding duplicates and understanding storage usage.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<style>
+  :root {
+    --bg: #0b0d12; --card: #141821; --line: #232937; --text: #e8ebf2; --muted: #9aa3b5;
+    --accent: #3b82f6; --accent-2: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 20px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+  .brand img { width: 32px; height: 32px; border-radius: 8px; }
+
+  .hero { text-align: center; padding: 56px 0 40px; }
+  .hero .icon { width: 112px; height: 112px; border-radius: 24px; }
+  h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 24px 0 16px; letter-spacing: -0.02em; }
+  .sub { color: var(--muted); font-size: 18px; max-width: 640px; margin: 0 auto 32px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: #fff;
+    text-decoration: none; font-weight: 600; font-size: 17px; padding: 14px 28px; border-radius: 12px;
+  }
+  .btn:hover { background: var(--accent-2); }
+  .btn svg { width: 20px; height: 20px; }
+  .meta { color: var(--muted); font-size: 14px; margin-top: 14px; }
+  .meta span + span::before { content: " · "; }
+  .disclosure { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+  .shot { margin: 48px auto 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); max-width: 960px; }
+  .shot img { display: block; width: 100%; height: auto; }
+
+  section { padding: 56px 0; }
+  h2 { font-size: 28px; text-align: center; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lead { text-align: center; color: var(--muted); margin: 0 0 36px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 16px; }
+  .card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .two img { width: 100%; border-radius: 12px; border: 1px solid var(--line); display: block; }
+
+  ol.steps { counter-reset: s; list-style: none; padding: 0; margin: 0 auto; max-width: 720px; }
+  ol.steps li {
+    counter-increment: s; position: relative; padding: 14px 0 14px 48px; border-bottom: 1px solid var(--line);
+  }
+  ol.steps li::before {
+    content: counter(s); position: absolute; left: 0; top: 12px; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--card); border: 1px solid var(--line); display: grid; place-items: center; font-size: 14px; font-weight: 600;
+  }
+  ol.steps li:last-child { border-bottom: 0; }
+  .note { color: var(--muted); font-size: 14px; }
+
+  .cta { text-align: center; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; text-align: center; }
+  footer a { color: var(--text); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap brand">
+    <img src="assets/icon.png" alt="" width="32" height="32">
+    DeepCleanMac
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <img class="icon" src="assets/icon.png" alt="DeepCleanMac app icon" width="112" height="112">
+    <h1>Reclaim disk space.<br>Keep your Mac organized.</h1>
+    <p class="sub">A native macOS utility for finding unnecessary files, managing applications, identifying duplicates and understanding storage usage.</p>
+    <a class="btn" href="DOWNLOAD_URL" data-download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      Download for Mac
+    </a>
+    <div class="meta"><span>macOS 14 Sonoma or later</span><span>Apple Silicon &amp; Intel</span><span>Signed &amp; notarized by Apple</span></div>
+    <div class="disclosure">Free to download and scan. Cleaning, uninstalling and other actions require a license.</div>
+
+    <div class="shot"><img src="assets/dashboard.jpg" alt="DeepCleanMac dashboard" width="1600" height="1000"></div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Eight tools in one app</h2>
+      <p class="lead">Clean, update, uninstall, find duplicates, reset, shred, analyze disk usage and monitor resources.</p>
+      <div class="grid">
+        <div class="card"><h3>Smart Cleanup</h3><p>Find supported caches, logs, temp files and app leftovers across 200+ locations. Review the results before anything is removed.</p></div>
+        <div class="card"><h3>App Uninstaller</h3><p>Remove apps along with leftover preferences, caches, containers and support files. You choose which files are removed.</p></div>
+        <div class="card"><h3>App Updater</h3><p>Check for updates to apps from the App Store, Homebrew or Sparkle, all in one list.</p></div>
+        <div class="card"><h3>Duplicate Finder</h3><p>Find identical files by comparing their content, then choose which copies to keep.</p></div>
+        <div class="card"><h3>Disk Space Analyzer</h3><p>Explore what's using your disk with an interactive treemap and find large files.</p></div>
+        <div class="card"><h3>App Resetter</h3><p>Reset supported apps to their default state without reinstalling.</p></div>
+        <div class="card"><h3>File Shredder</h3><p>Remove selected sensitive files using encryption with a discarded key and overwrite passes.</p></div>
+        <div class="card"><h3>System Monitor</h3><p>View real-time CPU, memory and disk usage and the processes using the most resources.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap two">
+      <img src="assets/clean.jpg" alt="Smart Cleanup results" width="1600" height="998" loading="lazy">
+      <img src="assets/uninstaller.jpg" alt="App Uninstaller" width="1600" height="1003" loading="lazy">
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Install &amp; activate</h2>
+      <p class="lead">Takes about a minute.</p>
+      <ol class="steps">
+        <li>Download <strong>DeepCleanMac.dmg</strong>, open it and drag DeepCleanMac into your Applications folder.</li>
+        <li>Launch DeepCleanMac from Applications. If macOS asks to confirm an app downloaded from the internet, click <strong>Open</strong>.</li>
+        <li>Click <strong>Grant Access…</strong> on the Full Disk Access banner, then turn on DeepCleanMac in System Settings › Privacy &amp; Security › Full Disk Access.</li>
+        <li>Open <strong>Settings › License</strong>, paste your license key and click <strong>Activate</strong>. One license activates one Mac.</li>
+      </ol>
+      <p class="note" style="text-align:center;margin-top:20px">Moving to a new Mac? Settings › License › Deactivate, then activate on the new one.<br>Some system-level cleaning asks for your administrator password. That prompt comes from macOS.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <a class="btn" href="DOWNLOAD_URL" data-download>Download DeepCleanMac</a>
+      <div class="meta"><span>Universal app</span><span>~6 MB</span><span>English</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Need help? <a href="mailto:SUPPORT_EMAIL">SUPPORT_EMAIL</a>
+  </div>
+</footer>
+
+</body>
+</html>
