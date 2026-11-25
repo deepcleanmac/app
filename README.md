@@ -27,6 +27,7 @@ Every release is:
 
 | Release | SHA-256 | VirusTotal |
 |---|---|---|
+| 1.7.4 | `387c35ce6d0e4ff71af50b71ffffa31514429fc897e55f5124adeba998a995d2` | [View scan report](https://www.virustotal.com/gui/file/387c35ce6d0e4ff71af50b71ffffa31514429fc897e55f5124adeba998a995d2/detection) |
 | 1.7.3 | `4f8df3dedbb10c7420796c43185ee2b811ad9b6bd8c2b1a1b92425f1aa726f07` | [View scan report](https://www.virustotal.com/gui/file/4f8df3dedbb10c7420796c43185ee2b811ad9b6bd8c2b1a1b92425f1aa726f07/detection) |
 
 ### Check it yourself
