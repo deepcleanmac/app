@@ -8,7 +8,7 @@ Standalone, noindex download page for BundleHunt and other promotions while the 
 2. Create a Release, tag `v1.7.3`, and attach `DeepCleanMac.dmg` (from deepmacclean-web/public/).
 3. Fill the placeholders:
    ```sh
-   sed -i '' 's#DOWNLOAD_URL#https://github.com/OWNER/REPO/releases/latest/download/DeepCleanMac.dmg#g; s#SUPPORT_EMAIL#you@example.com#g' index.html
+   sed -i '' 's#DOWNLOAD_URL#https://github.com/OWNER/REPO/releases/latest/download/DeepCleanMac.dmg#g' index.html
    ```
    The `releases/latest/download/` URL always serves the newest release, so the link never changes when you ship a new version.
 4. Push this folder to the repo root. In Settings > Pages, set Source to "Deploy from a branch", branch `main`, folder `/`.
