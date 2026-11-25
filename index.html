@@ -22,6 +22,10 @@
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
   header { padding: 20px 0; }
+  .bar { display: flex; align-items: center; justify-content: space-between; }
+  nav { display: flex; align-items: center; gap: 20px; font-size: 15px; }
+  nav a { text-decoration: none; }
+  .btn.btn-sm { padding: 8px 16px; font-size: 14px; border-radius: 10px; }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; }
   .brand img { width: 32px; height: 32px; border-radius: 8px; }
 
@@ -65,6 +69,22 @@
   ol.steps li:last-child { border-bottom: 0; }
   .note { color: var(--muted); font-size: 14px; }
 
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; max-width: 760px; margin: 0 auto; }
+  .plan { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; }
+  .plan.featured { border: 2px solid var(--accent); }
+  .plan h3 { margin: 0; font-size: 18px; }
+  .plan .desc { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
+  .plan .price { margin: 20px 0 4px; display: flex; align-items: baseline; gap: 6px; }
+  .plan .amt { font-size: 44px; font-weight: 700; letter-spacing: -0.02em; }
+  .plan .per { color: var(--muted); font-size: 14px; }
+  .plan ul { list-style: none; padding: 0; margin: 16px 0 24px; flex: 1; }
+  .plan li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; padding: 5px 0; }
+  .plan li svg { width: 18px; height: 18px; flex: none; margin-top: 2px; color: var(--accent); }
+  .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; font-size: 12px; font-weight: 600; padding: 4px 14px; border-radius: 999px; }
+  .btn-block { display: flex; justify-content: center; width: 100%; }
+  .btn-ghost { background: transparent; border: 1px solid var(--line); }
+  .btn-ghost:hover { background: #1c2230; }
+  .fine { text-align: center; max-width: 680px; margin: 14px auto 0; font-size: 13px; }
   .cta { text-align: center; }
   footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; text-align: center; }
   footer a { color: var(--text); }
@@ -73,9 +93,9 @@
 <body>
 
 <header>
-  <div class="wrap brand">
-    <img src="assets/icon.png" alt="" width="32" height="32">
-    DeepCleanMac
+  <div class="wrap bar">
+    <div class="brand"><img src="assets/icon.png" alt="" width="32" height="32">DeepCleanMac</div>
+    <nav><a href="#pricing">Pricing</a><a class="btn btn-sm" href="DOWNLOAD_URL" data-download>Download</a></nav>
   </div>
 </header>
 
@@ -111,6 +131,55 @@
     </div>
   </section>
 
+
+  <section id="pricing">
+    <div class="wrap">
+      <h2>Simple, transparent pricing</h2>
+      <p class="lead">Pay yearly or once. Prices in USD; taxes may apply.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>1-Year License</h3>
+          <p class="desc">Full access for one year. Renews automatically each year until you cancel.</p>
+          <div class="price"><span class="amt">$5</span><span class="per">/year</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Smart cleanup &amp; system monitor</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>App updater</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>App uninstaller</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Duplicate finder</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>App resetter</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>File shredder</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Disk space analyzer</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>1 Mac per license</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>1 year of updates</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Email support</li>
+          </ul>
+          <a class="btn btn-block btn-ghost" href="https://buy.polar.sh/polar_cl_efSZlkF5EglsvFlsYQOuuz62c9W8EIvZwej7z2ABn5c">Get Started</a>
+        </div>
+        <div class="plan featured">
+          <span class="badge">Best value</span>
+          <h3>Lifetime License</h3>
+          <p class="desc">Pay once for continued access and future updates.</p>
+          <div class="price"><span class="amt">$9</span><span class="per">one-time</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Smart cleanup &amp; system monitor</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>App updater</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>App uninstaller</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Duplicate finder</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>App resetter</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>File shredder</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Disk space analyzer</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>1 Mac per license</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Lifetime updates</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Priority email support</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.75l6 6 9-13.5"/></svg>14-day money-back guarantee</li>
+          </ul>
+          <a class="btn btn-block" href="https://buy.polar.sh/polar_cl_nFeceia3hGTK4WLEXpDWX0lHhhQlyOEaFbFq04MwHKn">Get Started</a>
+        </div>
+      </div>
+      <p class="note fine">14-day money-back guarantee. Email SUPPORT_EMAIL within 14 days of purchase for a full refund.</p>
+      <p class="note fine">Each license activates on one Mac at a time and can be moved to another Mac. Downloading and scanning are free; cleaning, uninstalling, updating, resetting, shredding and deleting files require a license.</p>
+    </div>
+  </section>
 
   <section>
     <div class="wrap">
