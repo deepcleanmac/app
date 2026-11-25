@@ -53,8 +53,8 @@
   .theme button:hover { color: var(--text); }
   .theme button[aria-pressed="true"] { background: var(--hover); color: var(--text); }
   .theme svg { width: 16px; height: 16px; }
-  @media (max-width: 480px) { nav .nav-link { display: none; } nav { gap: 12px; } }
-  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; text-decoration: none; color: var(--text); }
   .brand img { width: 32px; height: 32px; border-radius: 8px; box-shadow: 0 0 0 1px var(--line); }
 
   .hero { text-align: center; padding-top: 56px; padding-bottom: 40px; }
@@ -113,7 +113,61 @@
   .btn-ghost { background: transparent; border: 1px solid var(--line); color: var(--text); }
   .btn-ghost:hover { background: var(--hover); }
   .fine { text-align: center; max-width: 680px; margin: 14px auto 0; font-size: 13px; }
+  .safe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; }
+  .safe { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .safe h3 { margin: 12px 0 6px; font-size: 16px; }
+  .safe p { margin: 0; color: var(--muted); font-size: 14px; }
+  .safe-ico { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(34, 197, 94, .14); color: #16a34a; }
+  .safe-ico svg { width: 20px; height: 20px; }
+  .verify { margin-top: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .verify-row { display: flex; gap: 16px; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; }
+  .verify-row > div { min-width: 0; flex: 1; }
+  .verify-label { color: var(--muted); font-size: 13px; margin-bottom: 6px; }
+  .hash { display: block; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; word-break: break-all; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+  .copy { font: 600 14px/1 inherit; font-family: inherit; color: var(--text); background: transparent; border: 1px solid var(--line); border-radius: 10px; padding: 10px 16px; cursor: pointer; }
+  .copy:hover { background: var(--hover); }
+  .verify-actions { margin-top: 16px; }
+  .verify-actions .btn svg { width: 18px; height: 18px; color: #16a34a; }
+  .verify-how { margin: 14px 0 0; }
+  .cmd { display: block; margin-top: 8px; font: 12.5px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; overflow-wrap: anywhere; }
+  .about { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; max-width: 960px; margin: 0 auto; }
+  .social { display: flex; align-items: center; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; text-decoration: none; transition: border-color .15s; }
+  .social:hover { border-color: var(--accent); }
+  .social-ico { display: grid; place-items: center; flex: none; width: 40px; height: 40px; border-radius: 10px; background: var(--hover); color: var(--text); }
+  .social-ico svg { width: 18px; height: 18px; }
+  .social strong { display: block; font-size: 15px; }
+  .social small { display: block; color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+  .disclaimer { text-align: center; margin: 20px 0 0; font-size: 13px; }
   .cta { text-align: center; }
+  /* Phones */
+  @media (max-width: 600px) {
+    .wrap { padding: 0 16px; }
+    section { padding: 40px 0; }
+    h2 { font-size: 24px; }
+    .lead { margin-bottom: 24px; font-size: 15px; }
+    .hero { padding-top: 32px; padding-bottom: 24px; }
+    .hero .icon { width: 88px; height: 88px; border-radius: 20px; }
+    h1 { margin-top: 18px; font-size: 30px; }
+    .sub { font-size: 16px; margin-bottom: 24px; }
+    .hero > .btn { display: flex; justify-content: center; }
+    .meta span { display: block; }
+    .meta span + span::before { content: none; }
+    .shot { margin-top: 32px; border-radius: 10px; }
+    .card .body { padding: 16px; }
+    .plan { padding: 22px; }
+    .plan .amt { font-size: 38px; }
+    ol.steps li { padding-left: 42px; }
+    .safe, .verify { padding: 18px; }
+    .verify-row { flex-direction: column; align-items: stretch; gap: 10px; }
+    .copy, .verify-actions .btn { width: 100%; justify-content: center; }
+    .cta .btn { display: flex; justify-content: center; }
+  }
+  @media (max-width: 480px) {
+    nav { gap: 10px; }
+    nav .nav-link, nav .btn-sm { display: none; }
+    .brand { font-size: 15px; }
+  }
+
   footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; text-align: center; }
   footer a { color: var(--text); }
 </style>
@@ -122,7 +176,7 @@
 
 <header>
   <div class="wrap bar">
-    <div class="brand"><img src="assets/icon.png" alt="" width="32" height="32">DeepCleanMac</div>
+    <a class="brand" href="./" aria-label="DeepCleanMac home"><img src="assets/icon.png" alt="" width="32" height="32">DeepCleanMac</a>
     <nav>
       <a class="nav-link" href="#pricing">Pricing</a>
       <div class="theme" role="group" aria-label="Theme">
@@ -231,6 +285,70 @@
     </div>
   </section>
 
+  <section id="safety">
+    <div class="wrap">
+      <h2>Safety is our priority</h2>
+      <p class="lead">DeepCleanMac works with your files, so you should be able to trust exactly what you install.</p>
+      <div class="safe-grid">
+        <div class="safe">
+          <span class="safe-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3>Scanned on VirusTotal</h3>
+          <p>Every DMG is checked against dozens of antivirus engines before release. The full report is public.</p>
+        </div>
+        <div class="safe">
+          <span class="safe-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+          <h3>Notarized by Apple</h3>
+          <p>Apple scans every build for malicious content before macOS will open it.</p>
+        </div>
+        <div class="safe">
+          <span class="safe-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+          <h3>Signed with Developer ID</h3>
+          <p>Signed with our Apple Developer ID, so you can confirm the app hasn't been altered.</p>
+        </div>
+      </div>
+
+      <div class="verify">
+        <div class="verify-row">
+          <div>
+            <div class="verify-label">DeepCleanMac.dmg · version 1.7.3 · SHA-256</div>
+            <code class="hash" id="sha">4f8df3dedbb10c7420796c43185ee2b811ad9b6bd8c2b1a1b92425f1aa726f07</code>
+          </div>
+          <button type="button" class="copy" data-copy="sha" aria-label="Copy SHA-256">Copy</button>
+        </div>
+        <div class="verify-actions">
+          <a class="btn btn-ghost" href="https://www.virustotal.com/gui/file/4f8df3dedbb10c7420796c43185ee2b811ad9b6bd8c2b1a1b92425f1aa726f07/detection" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+            View VirusTotal report
+          </a>
+        </div>
+        <p class="note verify-how">To check your download, run this in Terminal. The result should match the hash above.</p>
+        <code class="cmd">shasum -a 256 ~/Downloads/DeepCleanMac.dmg</code>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>Who makes DeepCleanMac</h2>
+      <p class="lead">DeepCleanMac is independent software founded and built by Maulik Dhameliya.</p>
+      <div class="about">
+        <a class="social" href="https://x.com/mjdhameliya" target="_blank" rel="noopener">
+          <span class="social-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.36 5.77zm-1.08 16.17h1.7L7.4 4.73H5.58z"/></svg></span>
+          <span><strong>Maulik Dhameliya</strong><small>Founder · @mjdhameliya</small></span>
+        </a>
+        <a class="social" href="https://x.com/deepcleanmac" target="_blank" rel="noopener">
+          <span class="social-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.36 5.77zm-1.08 16.17h1.7L7.4 4.73H5.58z"/></svg></span>
+          <span><strong>DeepCleanMac on X</strong><small>@deepcleanmac</small></span>
+        </a>
+        <a class="social" href="https://www.linkedin.com/company/deepcleanmac" target="_blank" rel="noopener">
+          <span class="social-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13M7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0"/></svg></span>
+          <span><strong>DeepCleanMac on LinkedIn</strong><small>/company/deepcleanmac</small></span>
+        </a>
+      </div>
+      <p class="note disclaimer">DeepCleanMac is not affiliated with or endorsed by Apple Inc.</p>
+    </div>
+  </section>
+
   <section class="cta">
     <div class="wrap">
       <a class="btn" href="https://github.com/deepcleanmac/app/releases/latest/download/DeepCleanMac.dmg" data-download>Download DeepCleanMac</a>
@@ -263,6 +381,13 @@
     });
     sync();
   })();
+  document.querySelectorAll("[data-copy]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var text = document.getElementById(b.dataset.copy).textContent.trim();
+      var done = function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {}); 
+    });
+  });
 </script>
 </body>
 </html>
